@@ -8,10 +8,20 @@ fun main() {
     
     val myThirdDice = Dice(15, "orange")
     println("Your ${myThirdDice.numSides} sided ${myThirdDice.diceColor} dice rolled ${myThirdDice.roll()}!")
+    
+    // coin toss
+    println("your coin toss is ${Coin().flip()}!")
 }
 
 class Dice (val numSides:Int, val diceColor: String){
         fun roll(): Int {
         return (1..numSides).random()
+    }
+}
+
+class Coin (){
+    val coinSide = listOf("head", "tail")
+    fun flip(): String{
+        return (coinSide).random()
     }
 }
