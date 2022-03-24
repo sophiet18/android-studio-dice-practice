@@ -2,10 +2,11 @@ fun main() {
     val myFirstDice = Dice (6)
     val rollResult = myFirstDice.roll()
     val luckyNumber = 4
+    
     if(rollResult == luckyNumber){
         println("You win!")
     } else {
-        println("You didn't win, try again!")
+        println("Sorry you rolled ${rollResult}, please try again!")
     }
 }
 
